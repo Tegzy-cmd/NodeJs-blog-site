@@ -238,7 +238,7 @@ article-ul li:not(last-child) {
   filter: none;
 }
 
-.airticle-ul:hover li {
+.article-ul:hover li {
   filter: blur(3px);
 }
 
