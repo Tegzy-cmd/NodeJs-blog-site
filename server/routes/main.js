@@ -29,7 +29,7 @@ router.get("", async (req, res) => {
       locals,
       data,
       current: page,
-      nextPage: hasNextPage ? nextPage : null
+      nextPage: hasNextPage ? nextPage : null,
     });
   } catch (error) {
     console.log(error);
@@ -50,6 +50,28 @@ router.get("", async (req, res) => {
 //     }
 //   });
 
-// insertPostData()
+/**
+ * GET /
+ * Post:id
+ */
+
+router.get("/post/:id", async (req, res) => {
+  try {
+    
+
+    let slug = req.params.id;
+
+    const data = await Post.findById({_id:slug});
+    
+    const locals = {
+        title: data.title,
+        description: "Simple Blog created with NodeJs, Express & MongoDb",
+      };
+    
+    res.render('post', { locals, data });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 module.exports = router;
