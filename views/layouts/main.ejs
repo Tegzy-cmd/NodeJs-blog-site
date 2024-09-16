@@ -9,13 +9,21 @@
     <title><%= locals.title %></title>
 </head>
 <body>
+    <!-- Search Partial -->
+    <%- include('../partials/search.ejs') %>
+
     <div class="container">
-        <%- include('../partials/header.ejs')  %>
+        <!-- Header Partial -->
+        <%- include('../partials/header.ejs') %>
+
+        <!-- Main Content -->
         <div class="main">
-    <%- body %>
+            <%- body %> <!-- Make sure `body` is passed from backend -->
+        </div>
+
+        <!-- Footer Partial -->
+        <%- include('../partials/footer.ejs') %>
     </div>
-    <%- include('../partials/footer.ejs')  %>
-</div>
 
 </body>
 </html>
