@@ -35,8 +35,8 @@ h3 {
 }
 
 input[type="text"],
-input[type="text"],
-input[type="text"],
+input[type="password"],
+input[type="search"],
 input[type="text"],
 select,
 textarea {
